@@ -69,7 +69,8 @@ AI Nutrition Monitor is a Streamlit-based application designed to analyze food i
 
 ```plaintext
 ai-nutrition-monitor/
-│
+├── assets/
+│   └── nutrition_monitor.png
 ├── nutrition_app.py     # Main Streamlit application
 ├── requirements.txt     # Required Python libraries
 ├── .env                 # environment file
@@ -88,6 +89,7 @@ ai-nutrition-monitor/
 
 ### Input:
 A food image (e.g., a bowl of Chicken Tikka Masala with Rice and Naan).
+![Nutrition Monitor App](assets/Chicken_Tikka.jpg "AI Nutrition Monitor App Screenshot")
 
 ### Output:
 ```
