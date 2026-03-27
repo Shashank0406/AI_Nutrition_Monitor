@@ -3,15 +3,12 @@ from dotenv import load_dotenv, find_dotenv
 import os
 import google.generativeai as genai
 from PIL import Image
-import datetime
-import sqlite3
-import json
 import re
 
 load_dotenv(find_dotenv())
 genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 
-
+ingredients = []
 
 def extract_ingredients(analysis_text):
     ingredients = []
@@ -57,7 +54,7 @@ if uploaded_file:
     
     initial_prompt = """
     List all visible ingredients in this food image.
-    Format as a numbered list without quantities or calories.
+    Format as a numbered list without quantities or calories.c
     """
     
     analyze_button = st.button("Identify Ingredients")

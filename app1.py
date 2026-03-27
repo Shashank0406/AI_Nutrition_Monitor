@@ -25,7 +25,7 @@ def get_refined_analysis(ingredients_with_quantities):
     prompt = f"""
     As a nutritionist, provide a detailed analysis of this meal with the following ingredients and quantities:
     {ingredients_with_quantities}
-    if no ingredients quantities are provided take approx values
+    if no ingredients quantities are provided take approx values based on the picture
     
     Please provide:
     1. Total calories

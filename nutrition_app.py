@@ -13,7 +13,7 @@ st.set_page_config(page_title="My AI Nutrition Monitor")
 genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 
 def get_gemini_response(input,image):
-    model=genai.GenerativeModel("gemini-1.5-flash")
+    model=genai.GenerativeModel("gemini-2.5-flash")
     response = model.generate_content([input,image[0]])
     return response.text
 
@@ -75,12 +75,12 @@ even if some details are uncertain.
 """
 
 if submit:
-    with st.spinner("Processing....."):
-        image_data = input_image_setup(uploaded_file)
-        response = get_gemini_response(input_prompt,image_data)
-    st.success("DONE!")
-    st.subheader("Food Analysis")
-    st.write(response)
-
-
-
+    try:
+        with st.spinner("Processing....."):
+            image_data = input_image_setup(uploaded_file)
+            response = get_gemini_response(input_prompt, image_data)
+        st.success("DONE!")
+        st.subheader("Food Analysis")
+        st.write(response)
+    except Exception as e:
+        st.error(f"An error occurred: {e}")
