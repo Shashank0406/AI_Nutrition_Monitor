@@ -2,6 +2,9 @@
 
 AI Nutrition Monitor is a Streamlit-based application designed to analyze food items in images using generative AI. It identifies the meal, lists ingredients, estimates calorie counts, and provides a nutritional breakdown.
 
+## Live Project
+[Open the deployed app](https://shashank-ainutritionmonitor.streamlit.app)
+
 ---
 
 ## Features
